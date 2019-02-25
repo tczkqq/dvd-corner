@@ -14,8 +14,8 @@ img_size = logo.get_rect().size
 screen = pygame.display.set_mode(SIZE)
 pygame.display.set_caption('DVD Corner')
 
-x = randint(0, width-5)
-y = randint(0, height-5)
+x = randint(50, width-60)
+y = randint(50, height-60)
 x_speed = 2.5
 y_speed = 2.5
 
