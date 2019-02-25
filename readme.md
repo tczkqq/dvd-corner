@@ -5,5 +5,5 @@ Bouncing DVD Logo written in python3 and pygame.
 - pygame
   
 ## Screenshot
-![screenshot](screenshot.png)
+![screenshot](screenshot.gif)
 
