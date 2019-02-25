@@ -3,9 +3,13 @@
 from random import randint
 import pygame
 
-SIZE = width, height = 800, 600  # 4:3 ratio
-BLACK = (0, 0, 0)
 exit = False
+
+# Settings
+SIZE = width, height = 800, 600  # Resolution. (4:3)
+BG_COLOR = (0, 0, 0)  # Background color in RGB
+fullscreen = False  # Set True if you want fullscreen
+
 
 logo = pygame.image.load('logo.png')
 logo = pygame.transform.scale(logo, (100, 50))
@@ -13,6 +17,9 @@ clock = pygame.time.Clock()
 img_size = logo.get_rect().size
 screen = pygame.display.set_mode(SIZE)
 pygame.display.set_caption('DVD Corner')
+if fullscreen:
+    DISPLAYSURF = pygame.display.set_mode((0, 0), pygame.FULLSCREEN)
+    pygame.mouse.set_visible(False)
 
 x = randint(50, width-60)
 y = randint(50, height-60)
@@ -25,7 +32,7 @@ def move(x, y):
 
 
 while exit == False:
-    screen.fill(BLACK)
+    screen.fill(BG_COLOR)
     if (x + img_size[0] >= width) or (x <= 0):
         x_speed = -x_speed
     if (y + img_size[1] >= height) or (y <= 0):
