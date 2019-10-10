@@ -6,9 +6,9 @@ import pygame
 exit = False
 
 # Settings
-SIZE = width, height = 800, 600  # Resolution. (4:3)
+SIZE = width, height = 800, 600  # Resolution. (4:3)!
 BG_COLOR = (0, 0, 0)  # Background color in RGB
-fullscreen = False  # Set True if you want fullscreen
+fullscreen = False  # Fullscreen
 
 
 logo = pygame.image.load('logo.png')
